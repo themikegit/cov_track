@@ -1,6 +1,10 @@
-import React from 'react'
+import React,{useContext} from 'react'
+import {Context} from './Context'
+
+
 
 export default function Header() {
+    const [global] = useContext(Context);
     return (
         <div id="header">
         <div className="search">
@@ -10,12 +14,12 @@ export default function Header() {
         <div className="icon">
         </div>
             <div>
-                <h5>Confirmed</h5>
-                <h4>23324</h4>
+                <h5>New Confirmed</h5>
+                <h4> {global.newconfirmed} </h4>
             </div>
             <div >
-             <h5 >New Deaths</h5>
-             <h4>3405</h4>
+             <h5 >Total Confirmed</h5>
+             <h4>{global.totalconfirmed}</h4>
             </div>
         </div>
     </div>
