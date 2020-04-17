@@ -41,30 +41,32 @@ h4 {
   color: white;
 }
 
+#header div {
+ padding: 7px;
+}
+
+
 .info {
   display: flex;
   align-items: center;
 }
 
-#header div {
-  padding: 20px;
-}
 
 .search input {
   padding: 15px;
   border-radius: 25px;
   border: none;
-  background-color:#F1C853;
+  background-color:white;
   font-size: 16px;
-  font-weight: 100;
   width: 100%;
+  transition: 0.2s ease-in-out;
 }
 
-.icon  {
-  margin-left: 20px;
-  background-image: url('./assets/globe.png');
-  background-repeat: no-repeat;
+textarea:focus, input:focus{
+  background-color: #F1C853;
+  outline: none;
 }
+
 
 #contain {
   display: flex;
@@ -125,6 +127,9 @@ margin: 30px 20px;
 }
 
 .new-confirmed h4 {
- font-size: 40px;
+ font-size: 60px;
+ font-weight: 700;
+ text-align: center;
+ padding: 20px;
 }
 

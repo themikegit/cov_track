@@ -19,7 +19,7 @@ export default function Data(props) {
                    <h4> {props.newconfirmed} </h4>
                    </div>
                    <div className="date" >
-                       <p>34/34/23</p>
+                       <p> {props.date} </p>
                    </div>
                  
                </div>

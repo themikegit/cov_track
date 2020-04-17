@@ -2,12 +2,12 @@ import React,{useContext} from 'react'
 import Data from './Data'
 import {Context} from './Context'
 export default function Body() {
-const [global, countries] = useContext(Context)
-console.log(countries)
+const [global, countries,searchers] = useContext(Context)
+
 
     return (
         <div id="contain" >
-            {countries.map( item => <Data
+            {searchers.map( item => <Data
             key = {item.Slug}
             code = {item.CountryCode}
             country = {item.Country}
@@ -17,6 +17,7 @@ console.log(countries)
             totaldeaths = {item.TotalDeaths}
             totalrecovered = {item.TotalRecovered}
             totalconfirmed = {item.TotalConfirmed}
+            date = {item.Date}
             /> )}
         </div>
     )

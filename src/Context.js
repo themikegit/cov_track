@@ -8,6 +8,10 @@ export const Context = createContext();
 
 export const Provider = props => {
 
+    const searchTerm = () => {
+        console.log("hell")
+    }
+
     useEffect(()=> {
         axios.get(' https://api.covid19api.com/summary')
          .then(res => {
@@ -28,10 +32,19 @@ export const Provider = props => {
         totalconfirmed: ''
     });
 
-     const [countries, setCountries] = useState([])
+    const [countries, setCountries] = useState([]);
+
+    const [searchres, setSearchres] = useState([]);
+
+
+    const searchingTerm = (event) => {
+        const resul = countries.filter(item => item.Country.toLowerCase().includes(event.target.value.toLowerCase()))
+        setSearchres(resul);
+
+    };
 
     return (
-        <Context.Provider value = {[global, countries]} >
+        <Context.Provider value = {[global, countries, searchres, searchingTerm, ]} >
             {props.children}
         </Context.Provider>
     )
