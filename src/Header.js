@@ -17,11 +17,11 @@ export default function Header() {
         </div>
             <div>
                 <h5>New Confirmed</h5>
-                <h4> {global.newconfirmed} </h4>
+                <h4> {global.newconfirmed.toLocaleString()} </h4>
             </div>
             <div >
              <h5 >Total Confirmed</h5>
-             <h4>{global.totalconfirmed}</h4>
+             <h4>{global.totalconfirmed.toLocaleString()}</h4>
             </div>
         </div>
     </div>
